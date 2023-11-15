@@ -1,187 +1,69 @@
 <!DOCTYPE html>
-<html>
-    <title>www.my world</title>
-    <head>
-  
-        <STYLE>  
-       p2{
-        color: blue;
-       }
-            
-            h1{
-                border: 1PX SOLID black;
-               
-                width: 100%;
-                text-align: left;
-                
-                
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Content over Background Video</title>
+    <style>
+        body {
+            margin: 0; 
+            overflow: hidden;
+            position: relative;
+        }
+
+        video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .overlay-content {
+          
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            color: white;
+            opacity: 0;
+            animation: slideIn 2s ease-in-out forwards;
+         
+        }
+
+        @keyframes slideIn {
+            from {
+                left: -100%;
+                opacity: 0;
             }
-            h2{
-                border: 1PX SOLID black;
-               
-                width: 100%;
-                text-align: right;
-
+            to {
+                left: 0;
+                opacity: 1;
             }
-            .div1{
-                
-                
-                width: 20%;
-                height: 100px;
-                padding-top: 10% ;
-                padding :20px 20px 20px 20px
+        }
+    </style>
+</head>
+<body>
+    <video autoplay loop>
+        <source src="Friendship _ Stop Motion Animation.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
 
-}
-A{
-    color:blue;
-}
+    <div class="overlay-content">
+        <h1>halooooo</h1>
+        <p>elarkumm enodd deshyamnoo.....</p>
+        <p></p>
+        <p>🅸 🆂🆃🅸🅻🅻 🆅🅰🅻🆄🅴 🆈🅾🆄🆁 🅵🆁🅸🅴🅽🅳🆂🅷🅸🅿......</p>
+        <P>ANAKHA</P>
+        <P>AMITHA</P>
+        <P>ROSE</P>
+        <P>FIDHA</P>
+        <P>AYONA</P>
+    </div>
 
-.div0{
-    border: 3PX solid black;
-    
-    width:100%;
-    height: 500px;
-    border-color: blue;
-    padding-left:5px  ;
-    padding-top: 5px;
-    padding-right: 5px;
-    background-image: url('2.jpg');
-                background-repeat: no-repeat;
-               background-size: 100% ;
-    
-}
-.div3{
-   border-left: 4px solid red;
-                width: 70%;
-                height: 490px;
-                position: absolute;
-                right: 0px;
-                padding-top: 10% ;
-                padding-left: 2px;
-              
-                padding :5px 5px 5px 5px
+    <!-- Your other content goes here -->
 
-}
-TABLE,tr,td,TH{
-            border: 1px solid red ;
-            width: 20%;
-             border-collapse:collapse ;
-             color: blue;
-           }
-           .div4{
-           
-                width: 55%;
-                height: 150px;
-                
-                padding :20px 20px 20px 20px
-
-           }
-           .div5{
-            width: 55%;
-                height: 150px;
-                
-                padding :20px 20px 20px 20px
-
-           }
-           
-
-
-        </STYLE>
-    </head>
-    <BODY>     
-        <div class="div2">
-            <H2>RESUME</H2>
-        </div>
-
-        <h1>RANJIT SHINE</h1>
-        
-        
-            
-        <div class="div0">
-            <div class="div01">
-
-            </div>
-            <div class="div3">
-                <h3>about</h3>
-                <p>Hardworking college student with a motivated attitude and a variety of powerful skills. <br>Adept in various social media platforms and office technology programs. <br>Committed to contributing my expertise in a dynamic office or media production environment.</p>
-    
-            </div>
-           
-            <div class="div1">
-            <h3>contact</h3>
-            <p1>mobile 7510524153<br>
-                email:<p2>ranjitshine2003@gmail.com</p2><br>kakkanad 686578</p1><br>
-                <p1> <a href="https://in.linkedin.com/in/ranjit-shine-465373227">linkdin</a></p1>
-            </div>
-
-            <div class="div5">
-
-                <h3>skills</h3>
-                <p1><ol>
-                    <li>leadership quality</li>
-                <li>project management<br></li>
-            <li>communication</li></ol><br></p1>
-
-
-            </div>
-            
-
-            <div class="div4">
-                
-                <h3>qualificaion</h3>
-                <TABLE>
-            
-
-                    <tr>
-                    <tH>SL NO   </tH>
-                    <TH>QUALIFICATION</TH>
-                    <TH>INSTITUTION</TH>
-                    <TH>YEAR</TH>
-                    </TR>
-                    <TR>
-                        <TD>1   </TD>
-                        <TD>  BTECH</TD>
-                        <TD>RSET</TD>
-                        <TD>2022</TD>
-        
-                    </TR>
-        
-                    <TR>
-                        <TD>2  </TD>
-                        <TD>  SCHOOL</TD>
-                        <TD>ARS</TD>
-                        <TD>2021</TD>
-        
-                    </TR>
-                </TABLE>
-            </div>
-
-        
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-        </div>
-                
-
-        
-       </BODY>
-   
-
-
-
-
-
-
-
-
-
-
-    </html>
-        
+</body>
+</html>
