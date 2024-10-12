@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letter by Letter Animation</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .letter {
+            display: inline-block; /* Allows each letter to be animated individually */
+            opacity: 0; /* Start with letters hidden */
+            transform: translateY(20px); /* Slightly shift the letters down */
+            transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition for opacity and transform */
+        }
+
+        .visible {
+            opacity: 1; /* Full visibility */
+            transform: translateY(0); /* Move to original position */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container text-center mt-5">
+    <h1 id="animated-text">Hello, I'm Ranjit Shine!</h1>
+</div>
+
+<script>
+    const text = document.getElementById('animated-text').innerText;
+    const animatedTextContainer = document.getElementById('animated-text');
+    animatedTextContainer.innerHTML = ''; // Clear the original text
+
+    // Create span for each letter
+    for (let letter of text) {
+        const span = document.createElement('span');
+        span.className = 'letter';
+        span.innerText = letter === ' ' ? '\u00A0' : letter; // Preserve spaces
+        animatedTextContainer.appendChild(span);
+    }
+
+    // Animate letters one by one
+    const letters = document.querySelectorAll('.letter');
+    letters.forEach((letter, index) => {
+        setTimeout(() => {
+            letter.classList.add('visible');
+        }, index * 150); // Delay for each letter (150ms)
+    });
+</script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
